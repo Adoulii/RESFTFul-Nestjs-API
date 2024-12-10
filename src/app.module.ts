@@ -17,7 +17,7 @@ import mongoose from 'mongoose';
     MongooseModule.forRootAsync({
       imports:[ConfigModule],
       useFactory: async (configService: ConfigService)=>({
-        uri:configService.get('MONGO_URI'),
+        uri: configService.get('MONGO_URI'),
         useNewUrlParser: true,
         useUnifiedTopology: true,
       }),
